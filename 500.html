@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Erreur serveur – MiraLocks</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/optimize.css">
+<script src="js/dynamic-colors.js"></script>
+<style>
+  .error-page {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .error-code {
+    font-size: clamp(5rem, 20vw, 10rem);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg,#c9a84c,#e8d080,#c9a84c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+  .error-emoji { font-size: clamp(3rem, 10vw, 5rem); margin-bottom: 20px; display: block; animation: shake 1s ease-in-out; }
+  @keyframes shake {
+    0%,100%{transform:rotate(0)} 20%{transform:rotate(-8deg)} 40%{transform:rotate(8deg)}
+    60%{transform:rotate(-5deg)} 80%{transform:rotate(5deg)}
+  }
+  .error-title { font-size: clamp(1.4rem, 4vw, 2rem); margin-bottom: 12px; color: var(--text, #0c2818); }
+  .error-desc  { color: var(--muted, #5a7a66); font-size: 1.05rem; max-width: 520px; line-height: 1.7; margin-bottom: 32px; }
+  .error-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .error-links a.cta { padding: 14px 28px; font-size: 1rem; }
+  .error-links a.secondary {
+    padding: 13px 24px;
+    border: 2px solid var(--gold, #c9a84c);
+    border-radius: 10px;
+    color: var(--gold, #c9a84c);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s;
+    font-size: 1rem;
+  }
+  .error-links a.secondary:hover { background: var(--gold, #c9a84c); color: #0c3320; }
+  .status-box {
+    margin-top: 40px;
+    background: var(--gray-100, #f0f7f3);
+    border: 1px solid var(--gray-200, #dceee4);
+    border-radius: 12px;
+    padding: 20px 28px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .status-row { display: flex; align-items: center; gap: 10px; margin: 8px 0; font-size: .9rem; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green { background: #22c55e; }
+  .dot-yellow { background: #f59e0b; animation: blink .8s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .quick-links {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    max-width: 680px;
+    width: 100%;
+  }
+  .quick-link-card {
+    background: var(--gray-100, #f0f7f3);
+    border-radius: 12px;
+    padding: 18px;
+    text-decoration: none;
+    color: var(--text, #0c2818);
+    transition: all .3s;
+    border: 1px solid var(--gray-200, #dceee4);
+  }
+  .quick-link-card:hover { background:#fff; transform:translateY(-4px); box-shadow:0 8px 24px rgba(12,50,32,.1); }
+  .quick-link-card .ql-icon { font-size: 1.8rem; margin-bottom: 8px; }
+  .quick-link-card h4 { font-size: .92rem; margin-bottom: 4px; }
+  .quick-link-card p  { font-size: .8rem; color: var(--muted); margin: 0; }
+</style>
+</head>
+<body>
+<div style="background:var(--gold,#c9a84c);color:#0c3320;text-align:center;padding:6px 16px;font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+  <span>📞 <a href="tel:+22897989001" style="color:#0c3320;font-weight:700;text-decoration:none">+228 97 98 90 01</a></span>
+  <span>•</span>
+  <span>💬 <a href="https://wa.me/22897989001" target="_blank" style="color:#0c3320;font-weight:700;text-decoration:none">WhatsApp</a></span>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="brand">
+      <img src="assets/logo.png" alt="MiraLocks Logo" width="48" height="48" loading="eager">
+      <div><h1>MiraLocks</h1></div>
+    </div>
+    <button class="hamburger-menu" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" role="navigation" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="gallery.html">Galerie</a>
+      <a href="blog.html">Blog</a>
+      <a href="services.html">Services</a>
+      <a href="rendezvous.html">Rendez‑vous</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="avis.html">Avis</a>
+      <a href="about.html">À propos</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<main>
+  <div class="container error-page">
+    <span class="error-emoji">⚙️</span>
+    <div class="error-code">500</div>
+    <h2 class="error-title">Oups ! Quelque chose s'est cassé côté serveur…</h2>
+    <p class="error-desc">
+      Nos serveurs rencontrent un problème technique temporaire. Ce n'est pas de votre faute !
+      Notre équipe est déjà sur le coup. Réessayez dans quelques instants.
+    </p>
+    <div class="error-links">
+      <a class="cta" href="index.html">🏠 Retour à l'accueil</a>
+      <button class="secondary" onclick="window.location.reload()" style="cursor:pointer">🔄 Réessayer</button>
+    </div>
+
+    <div class="status-box">
+      <p style="font-weight:700;margin-bottom:12px;font-size:.95rem">État du service</p>
+      <div class="status-row"><div class="dot dot-green"></div><span>Site principal — En ligne</span></div>
+      <div class="status-row"><div class="dot dot-yellow"></div><span>Contenu dynamique — Perturbé temporairement</span></div>
+      <div class="status-row"><div class="dot dot-green"></div><span>Prise de rendez-vous WhatsApp — Disponible</span></div>
+    </div>
+
+    <div class="quick-links">
+      <a href="https://wa.me/22897989001?text=Bonjour%20MiraLocks" target="_blank" class="quick-link-card">
+        <div class="ql-icon">💬</div>
+        <h4>WhatsApp</h4>
+        <p>Contactez-nous directement</p>
+      </a>
+      <a href="tel:+22897989001" class="quick-link-card">
+        <div class="ql-icon">📞</div>
+        <h4>Appeler</h4>
+        <p>+228 97 98 90 01</p>
+      </a>
+      <a href="rendezvous.html" class="quick-link-card">
+        <div class="ql-icon">📅</div>
+        <h4>Rendez-vous</h4>
+        <p>Réserver une séance</p>
+      </a>
+      <a href="services.html" class="quick-link-card">
+        <div class="ql-icon">✂️</div>
+        <h4>Nos services</h4>
+        <p>Tarifs & prestations</p>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <h3 style="color:var(--white)">INSTITUT MiraLocks</h3>
+      <p style="margin-top:12px">© <span id="copy-year"></span> MiraLocks. Tous droits réservés.</p>
+    </div>
+    <div>
+      <h4 style="color:var(--white)">Contact</h4>
+      <p style="margin-top:8px">
+        📞 <a href="tel:+22897989001" style="color:#b8d4c4">+228 97 98 90 01</a><br>
+        💬 <a href="https://wa.me/22897989001" target="_blank" style="color:#b8d4c4">WhatsApp</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/22897989001?text=Bonjour%20MiraLocks" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+
+<script src="js/hamburger-menu.js" defer></script>
+<script src="js/theme-loader.js" defer></script>
+<script>document.getElementById('copy-year').textContent = new Date().getFullYear();</script>
+<script src="js/cookie-banner.js" defer></script>
+</body>
+</html>
